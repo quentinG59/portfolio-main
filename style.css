@@ -7,6 +7,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
 body {
   font-family: "Roboto Mono", monospace;
 }
@@ -121,7 +125,10 @@ h2 {
   margin-bottom: 5vh;
   margin-left: 1.5rem;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+}
 .button {
   display: flex;
 }
@@ -133,13 +140,13 @@ h2 {
   border-radius: 2rem;
 }
 
-a {
-  text-decoration: none;
+.link-btn {
   color: white;
   align-self: center;
 }
 
-a:hover {
+.link-project:hover,
+.fab:hover {
   transform: scale(1.1);
 }
 
@@ -176,7 +183,7 @@ a:hover {
   font-size: 2rem;
 }
 
-/* INFO */
+/*! Section about */
 
 .aboutBody {
   background-color: #202020;
@@ -212,6 +219,7 @@ a:hover {
 .aboutP {
   margin-bottom: 4rem;
 }
+/*! section project */
 
 .project-body {
   height: 100vh;
@@ -227,7 +235,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 5rem;
+  gap: 2rem;
 }
 .card {
   display: flex;
@@ -238,6 +246,45 @@ a:hover {
 .info-project {
   text-align: center;
 }
+.btn {
+  background: transparent;
+  color: white;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  margin: 2rem auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 0.25rem 4rem;
+  line-height: 1;
+  outline-color: white;
+  position: relative;
+}
+.btn::before {
+  content: "";
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  z-index: -1;
+  background: white;
+}
+.btn:hover::before {
+  width: 80%;
+}
+.btn:hover {
+  border-left: 2px solid white;
+  color: #202020;
+}
+.container-btn {
+  display: flex;
+}
+
+/*! media query */
 
 @media (max-width: 325px) {
   .aboutImg {
