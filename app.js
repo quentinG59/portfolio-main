@@ -9,3 +9,10 @@ btnOpen.addEventListener("click", () => {
 btnClose.addEventListener("click", () => {
   nav.classList.toggle("show-nav");
 });
+const loading = document.querySelector(".loading");
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loading.classList.add("hideLoader");
+  }, 12000);
+});
