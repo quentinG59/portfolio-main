@@ -202,6 +202,12 @@ h2 {
   left: 0;
   font-size: 2rem;
 }
+/* ! CV */
+
+embed {
+  width: 100%;
+  height: 100vh;
+}
 
 /*! Section about */
 
@@ -262,12 +268,85 @@ h2 {
   flex-direction: column;
   background: #d2d2d2;
 }
-
 .info-project {
   text-align: center;
 }
+/*? projet test */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+}
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.slides {
+  width: 500px;
+  height: 500px;
+  display: flex;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 500%;
+  transition: 2s;
+}
+.slide a {
+  width: 800px;
+  height: 500px;
+}
+img {
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+}
+/* css pour manual slide nav */
+
+.navigation-manuel {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manuel-btn {
+  border: 2px solid red;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manuel-btn:not(:last-child) {
+  margin-right: 40px;
+}
+.manuel-btn:hover {
+  background: red;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0%;
+}
+#radio2:checked ~ .first {
+  margin-left: -160%;
+}
+#radio3:checked ~ .first {
+  margin-left: -320%;
+}
+#radio4:checked ~ .first {
+  margin-left: -480%;
+}
+
 /*! button index */
 .btn {
+  text-align: left;
   z-index: 1;
   background: transparent;
   color: #202020;
@@ -374,13 +453,13 @@ h2 {
 
 .titleLoader::before {
   background-color: #202020;
-  animation: typewriter 6s steps(26) 1s forwards;
+  animation: typewriter 6s steps(30) 1s forwards;
 }
 
 .titleLoader::after {
   width: 0.125em;
   background: whitesmoke;
-  animation: typewriter 6s steps(26) 1s forwards, blink 750ms steps(26) infinite;
+  animation: typewriter 6s steps(30) 1s forwards, blink 750ms steps(30) infinite;
 }
 
 .subtitle {
@@ -415,6 +494,25 @@ h2 {
 .hideLoader {
   visibility: hidden;
   z-index: -100;
+}
+/* ! modal */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -999;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+.showModal {
+  z-index: 999;
+  visibility: visible;
 }
 /**
  * ----------------------------------------
