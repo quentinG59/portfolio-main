@@ -180,7 +180,7 @@ h2 {
 }
 
 .nav {
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   flex-direction: column;
   justify-content: space-evenly;
   display: NONE;
@@ -572,6 +572,7 @@ img {
   .main {
     height: 100vh;
     flex-direction: column;
+    width: 100%;
   }
 
   .img {
