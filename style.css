@@ -245,36 +245,16 @@ embed {
 .aboutP {
   margin-bottom: 4rem;
 }
-/*! section project */
+/*! page project */
 
 .project-body {
   height: 100vh;
-  background: #202020;
-}
-.title-project {
-  color: white;
-  text-align: center;
-  padding: 1.5rem 1.5rem;
-}
-.main-project {
-  height: 85vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 2rem;
-}
-.card {
   display: flex;
   flex-direction: column;
-  background: #d2d2d2;
 }
-.info-project {
-  text-align: center;
-}
+
 /*? projet test */
 body {
-  margin: 0;
-  padding: 0;
   height: 100vh;
   display: flex;
   justify-content: center;

@@ -4,6 +4,11 @@ const btnClose = document.querySelector(".btn-close");
 const btnProject = document.querySelector("#projet");
 const modal = document.querySelector(".modal");
 const closeModalBtn = document.querySelector(".btn-project");
+const btnSkip = document.querySelector("#skip");
+
+btnSkip.addEventListener("click", () => {
+  loading.classList.add("hideLoader");
+});
 
 closeModalBtn.addEventListener("click", () => {
   modal.classList.remove("showModal");
@@ -25,5 +30,5 @@ const loading = document.querySelector(".loading");
 window.addEventListener("load", () => {
   setTimeout(() => {
     loading.classList.add("hideLoader");
-  },);
+  }, 10000);
 });
