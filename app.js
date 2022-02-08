@@ -30,5 +30,5 @@ const loading = document.querySelector(".loading");
 window.addEventListener("load", () => {
   setTimeout(() => {
     loading.classList.add("hideLoader");
-  }, 10000);
+  }, 12000);
 });
