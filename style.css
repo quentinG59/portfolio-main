@@ -528,9 +528,87 @@ img {
 
 /*! media query */
 
-@media (max-width: 325px) {
+@media (max-width: 425px) {
   .aboutImg {
     margin-top: 120%;
+  }
+  .project-body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*? projet test */
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+  }
+  .slider {
+    width: 266px;
+    height: 166px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .slides {
+    width: 266px;
+    height: 166px;
+    display: flex;
+  }
+  .slides input {
+    display: none;
+  }
+  .slide {
+    width: 266%;
+    transition: 2s;
+  }
+  .slide a {
+    width: 266px;
+    height: 166px;
+  }
+  img {
+    width: 266px;
+    height: 166px;
+    object-fit: cover;
+  }
+  /* css pour manual slide nav */
+
+  .navigation-manuel {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 55%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  .manuel-btn {
+    border: 2px solid #202020;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .manuel-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+  .manuel-btn:hover {
+    background: #202020;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0%;
+  }
+  #radio2:checked ~ .first {
+    margin-left: -100%;
+  }
+  #radio3:checked ~ .first {
+    margin-left: -200%;
+  }
+  #radio4:checked ~ .first {
+    margin-left: -300%;
   }
 }
 
